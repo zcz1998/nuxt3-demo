@@ -23,5 +23,5 @@ const items = ref<AccordionItem[]>([
 <template>
   <!-- <UAccordion :items="items" /> -->
    {{ $t('welcome') }}
-   <toggle-theme></toggle-theme>
+   <!-- <toggle-theme></toggle-theme> -->
 </template>

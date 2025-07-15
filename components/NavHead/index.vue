@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-[#18181C] shadow-sm sticky top-0 z-50">
+  <header class="bg-[#18181C] shadow-sm sticky w-full top-0 z-50">
     <UContainer class="flex items-center justify-between h-18 gap-12">
       <!-- 左侧 Logo -->
       <div class="flex-shrink-0">
@@ -20,8 +20,16 @@
       <!-- 右侧按钮 - 大屏幕显示 -->
       <div class="hidden md:flex items-center space-x-4">
         <lang-switch class="mr-10"></lang-switch>
-        <UButton color="primary" variant="outline" class="px-8 py-2">下载客户端</UButton>
-        <UButton class="px-8 py-2">免费试用</UButton>
+        <UDropdownMenu
+    :items="items"
+    :ui="{
+      content: 'w-48'
+    }"
+  >
+  <UButton color="primary" variant="outline" class="px-8 py-2">下载客户端</UButton>
+  </UDropdownMenu>
+        
+        <UButton class="px-8 py-2" to="https://github.com/nuxt/ui" target="_blank">免费试用</UButton>
       </div>
 
       <!-- 移动端菜单按钮 -->
@@ -44,4 +52,38 @@ const navItems = [
   { name: t('plan'), path: '/plan' },
   { name: t('support'), path: '/FAQ' },
 ]
+
+
+
+
+const items = ref([
+  [
+    {
+      label: '安卓',
+      icon: 'i-lucide-users'
+    },
+    {
+      label: 'Window',
+      icon: 'i-lucide-user-plus',
+      children: [
+        [
+          {
+            label: 'Email',
+            icon: 'i-lucide-mail'
+          },
+          {
+            label: 'Message',
+            icon: 'i-lucide-message-square'
+          }
+        ],
+        [
+          {
+            label: 'More',
+            icon: 'i-lucide-circle-plus'
+          }
+        ]
+      ]
+    },
+  ],
+])
 </script>

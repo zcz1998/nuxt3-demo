@@ -5,6 +5,9 @@ export default defineNuxtConfig({
   modules: ['@nuxt/ui', '@nuxt/image', '@nuxtjs/i18n',
     '@pinia/nuxt',
   ],
+  ui:{
+    colorMode:false
+  },
   css: ['@/assets/css/main.css'],
   i18n: {
     locales: [
@@ -69,7 +72,4 @@ export default defineNuxtConfig({
       redirectOn: 'root' // 推荐
     },
   },
-  colorMode:{
-    preference:'dark'
-  }
 })
