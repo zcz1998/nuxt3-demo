@@ -1,5 +1,18 @@
-welcome: Welcome
-home: Home
-about: About
-switch_language: Switch Language
-cola: cola
+home: HOME
+news: NEWS
+plan: PLAN
+support: SUPPORT
+ugshop: UgShop
+download_client: Download Client
+free_trial: Free Trial
+hero:
+  title: Perfect Cloud Gaming Tool, Play Freely Anytime
+  subtitle: 24/7 Cloud Online, Ultra-Low Latency
+  download_apk: Download Official APK
+why_choose:
+  title: Why Choose UgPhone
+  feature1: Run Multiple Games Effortlessly
+  feature2: 24/7 Cloud Online
+  feature3: Global Node Coverage, Low-Latency Stable Connection
+  feature4: Multiple Device Models, Flexible Performance Options
+  feature5: Popular Games Support, Smooth Experience

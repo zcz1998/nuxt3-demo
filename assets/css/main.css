@@ -1,2 +1,26 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
+
+@theme static {
+  --font-sans: 'Public Sans', sans-serif;
+  
+  --breakpoint-3xl: 1920px;
+
+  /* 主色系 (Primary) - #F94647 作为 600 色阶 */
+  --color-primary-50: #FFF0F0;
+  --color-primary-100: #FFE0E0;
+  --color-primary-200: #FFC1C1;
+  --color-primary-300: #FF9191;
+  --color-primary-400: #FF6161;
+  --color-primary-500: #FF3A3A;
+  --color-primary-600: #F94647;
+  --color-primary-700: #E02C2D;
+  --color-primary-800: #C11F20;
+  --color-primary-900: #A11819;
+  --color-primary-950: #800E0F;
+}
+
+:root {
+  --ui-primary: #F94647;
+}
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>系统错误</title>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name=viewport>
+<meta HTTP-EQUIV="Refresh" content="3">
+<link data-n-head="ssr" rel="icon" type="image/x-icon" href="./favicon.png">
+<style>
+.__nuxt-error-page{padding: 1rem;background:#f7f8fb;color:#47494e;text-align:center;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;font-family:sans-serif;font-weight:100!important;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-webkit-font-smoothing:antialiased;position:absolute;top:0;left:0;right:0;bottom:0}
+.__nuxt-error-page .error{max-width:450px;user-select: none}
+.__nuxt-error-page img{width: 20%}
+.__nuxt-error-page .title{font-size:24px;font-size:1.5rem;margin-top:15px;color:transparent;margin-bottom:8px;background: linear-gradient(90deg, #f74848, #fe9678);background-clip: text;-webkit-background-clip: text;-moz-background-clip: text;-ms-background-clip: text;-o-background-clip: text;}
+.__nuxt-error-page .description{color:white;line-height:21px;margin: auto;padding:10px;width: 3.75rem;margin-top: 1.875rem;cursor: pointer;border-radius: 6px;background: linear-gradient(90deg, #f96157, #fc816b);}
+.__nuxt-error-page a{color:#7f828b!important;text-decoration:none}
+.__nuxt-error-page .logo{position:fixed;left:12px;bottom:12px}
+</style>
+<script type="text/javascript">
+function refresh(){ location.reload() } 
+let second = 3
+const intervay = window.setInterval(() => {
+  second--
+  document.querySelector('span').innerText = second
+  if (second === 1) {
+    window.clearInterval(intervay)
+  }
+}, 1000)
+</script>
+</head>
+<body>
+  <div class="__nuxt-error-page">
+    <div class="error">
+        <img src="./favicon.png" alt="OgCloud">
+        <div class="title">
+          您好，由于网络不稳定，导致未显示正确信息，请您点击刷新按钮，即可恢复正常
+          <p><span>3</span> s后自动刷新</p>
+        </div>
+        <div class="description" onclick="refresh()">刷新</div>
+    </div>
+  </div>
+</body>
+</html>

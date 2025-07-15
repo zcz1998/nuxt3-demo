@@ -1,34 +1,65 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import yaml from 'js-yaml'
-import fs from 'fs'
-import path from 'path'
-// 读取 YAML 文件并转换为 JSON
-const loadYaml = (filePath: string) => {
-  const file = fs.readFileSync(path.resolve(__dirname, filePath), 'utf8')
-  return yaml.load(file)
-}
-
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
   modules: ['@nuxt/ui', '@nuxt/image', '@nuxtjs/i18n',
     '@pinia/nuxt',
   ],
-  css: ['~/assets/css/main.css'],
+  css: ['@/assets/css/main.css'],
   i18n: {
     locales: [
       {
-        code: 'en',
-        name: 'English',
-        file: 'en.yaml'
-      },
-      {
-        code: 'zh',
-        name: '中文',
-        file: 'zh.yaml'
-      },
+      name: 'English',
+      code: 'en',
+      file:'en.yaml'
+    },
+    {
+      name:'简体中文',
+      code:'zh',
+      file:'zh.yaml'
+    },
+    {
+      name: '繁体中文',
+      code: 'tc',
+      file:'tc.yaml'
+    },
+    {
+      name: '日本語',
+      code: 'jp',
+      file:'jp.yaml'
+    },
+    {
+      name: 'ภาษาไทย',
+      code: 'th',
+      file:'th.yaml'
+    },
+    {
+      name: '한국어',
+      code: 'ko',
+      file:'ko.yaml'
+    },
+    {
+      name: 'Việt nam',
+      code: 'vi',
+      file:'vi.yaml'
+    },
+    {
+      name: 'português',
+      code: 'pt',
+      file:'pt.yaml'
+    },
+    {
+      name: 'Spanish',
+      code: 'es',
+      file:'es.yaml'
+    },
+    {
+      name: 'Indonesia',
+      code: 'id',
+      file:'id.yaml'
+    },
     ],
-    defaultLocale: 'zh',
+    defaultLocale: 'en',
     lazy: true,
     langDir: 'locales/',
     strategy: 'prefix_except_default', // 路由策略
@@ -37,11 +68,8 @@ export default defineNuxtConfig({
       cookieKey: 'i18n_redirected',
       redirectOn: 'root' // 推荐
     },
-    
-    // 自定义 YAML 加载器
-    // loadYamlMessages: async (locale: string) => {
-    //   const filePath = `./locales/${locale}.yml`
-    //   return loadYaml(filePath)
-    // },
   },
+  colorMode:{
+    preference:'dark'
+  }
 })

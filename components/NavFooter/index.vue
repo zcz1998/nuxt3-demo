@@ -2,8 +2,6 @@
     尾部
     {{ languageStore.currentLocale }}
     {{ $t('cola') }}
-    <UButton @click="changeLang('zh')">中文</UButton>
-    <UButton @click="changeLang('en')">Eng</UButton>
     
 </template>
 
